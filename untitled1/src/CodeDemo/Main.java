@@ -1,10 +1,21 @@
+package CodeDemo;
+
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Date;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+
+        PrintNum printing = new PrintNum();
+        printing.calcu();
+
+
+
+
+
 
 
 
@@ -32,11 +43,29 @@ public class Main {
         System.out.println(point2);
 
 
+        String message = "Hello World" + "!!"; //String is a reference type, shortcut without
+        //using new to instansiate
+        System.out.println(message.endsWith("!!")); //message.lenght(), message.indexof("0")
+
+        //creating an array
+        int numbers[]= new int[4];
+        // int numbers[] ={0,1,2,3} if we already know the elements
+        //int numbers[][]= new int[2][3]; 2 rows 3 coulumns [[1,2,3], [5,6,7]]
+
+        //adding elements in the array
+        for (int i = 1; i < numbers.length; i++) {
+            numbers[i]=i;
 
 
-
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
         }
+        for (int i =0; i < numbers.length; i++){
+            System.out.println("Numbers in arrays are:" + numbers[i]);
+            //when you print array numbers only you will get an ADdress
+        }
+        System.out.println(Arrays.toString(numbers));
+
+
+
+
     }
 }
